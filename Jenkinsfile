@@ -13,6 +13,12 @@ pipeline {
                 sh './mvnw clean package'
             }
         }
+        
+        stage('Checkstyle') {
+            steps {
+                sh './mvnw checkstyle:check'
+            }
+        }
 
         stage('Docker Build') {
             steps {

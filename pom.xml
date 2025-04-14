@@ -52,6 +52,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+      			<groupId>org.apache.maven.plugins</groupId>
+      			<artifactId>maven-checkstyle-plugin</artifactId>
+      			<version>3.3.0</version>
+      			<configuration>
+        			<configLocation>config/checkstyle.xml</configLocation>
+      			</configuration>
+    		</plugin>
+    		<plugin>
+     			<groupId>com.github.spotbugs</groupId>
+      			<artifactId>spotbugs-maven-plugin</artifactId>
+      			<version>4.8.3.0</version>
+    		</plugin>
+    		<plugin>
+      			<groupId>org.owasp</groupId>
+      			<artifactId>dependency-check-maven</artifactId>
+      			<version>9.0.9</version>
+    		</plugin>
 		</plugins>
 	</build>
 	<repositories>

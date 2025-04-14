@@ -33,6 +33,8 @@ pipeline {
             }
         }
         
+}
+
   post {
     always {
       archiveArtifacts artifacts: 'target/site/checkstyle.html', allowEmptyArchive: true
@@ -48,5 +50,4 @@ pipeline {
       echo 'Build completed successfully 🎉'
     }
   }
-}
 }

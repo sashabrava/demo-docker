@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoDockerApplication {
 
   public static void main(String[] args) {
+	  int BAD_variable = 1; 
     SpringApplication.run(DemoDockerApplication.class, args);
   }
 

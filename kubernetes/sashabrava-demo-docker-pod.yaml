@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    io.kompose.network/kubernetes-default: "true"
+    io.kompose.service: sashabrava-demo-docker
+  name: sashabrava-demo-docker
+spec:
+  containers:
+    - image: sashabrava/sashabrava-demo-docker:latest
+      name: sashabrava-demo-docker
+      ports:
+        - containerPort: 8080
+          hostPort: 8080
+          protocol: TCP
+      resources: {}
+  restartPolicy: OnFailure
+status: {}
